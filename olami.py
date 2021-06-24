@@ -10,6 +10,10 @@ elif    len(ask_num) < 2:
         new_entry2 = input("error, input 2 digit nos: ")
 
 
+elif    ask_num.isalpha():
+        new_entry1 = input("error, input num not alpha: ")
+
+
 elif    int(ask_num) > 10 and int(ask_num) <100:
         first_num = int(str(ask_num)[0])
         second_num = int(str(ask_num)[1])
@@ -19,9 +23,17 @@ elif    int(ask_num) > 10 and int(ask_num) <100:
 
         else:print("two digits but you lose!")
 
-elif    ask_num.isalpha:
-        new_entry1 = input("error, input num not alpha: ")
+
 
 else:
         while ask_num is not True: 
             new_entry1 = input("error, keep trying")
+
+# elif    ask_num == list(ask_num):
+#         sum_ofnumber =0
+#         for i in ask_num:
+#             sum_ofnumber +=i
+#             print(sum_ofnumber)
+#             if  (sum_ofnumber >= 0  and sum_ofnumber <= 9):
+#                 print(sum_ofnumber," is correct. you win!")
+#             else:print("two digits but you lose!")
