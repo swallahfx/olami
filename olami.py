@@ -5,7 +5,7 @@ ask_num = input("pick 2 digit numbers between 10 and 99: ")
 
 if  len(ask_num) > 2:
         new_entry1 = input("sorry, input digit with 2 values: ")
-            
+        ask_num = new_entry1
         
 
 elif    len(ask_num) < 2:
@@ -29,7 +29,9 @@ elif    int(ask_num) > 10 and int(ask_num) <100:
                 new_entry1 = input("sorry, input number again ")       
                 
 else:
-        new_entry1 = input("sorry, keep trying")
+        while(False):
+                new_entry1 = input("sorry, keep trying")
+                new_entry1 = ask_num
         # else:
         #     while ask_num is not True: 
                 
@@ -42,3 +44,5 @@ else:
 #             if  (sum_ofnumber >= 0  and sum_ofnumber <= 9):
 #                 print(sum_ofnumber," is correct. you win!")
 #             else:print("two digits but you lose!")
+
+
