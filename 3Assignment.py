@@ -35,12 +35,20 @@ def atm():
     print("YOU ARE WELCOME TO pytBank \n",)
     user_name = input("pls, input Account name: ")
     user_title = input('your title: ')
-    card_num= getpass.getpass("pls, input your card number: ")
+    card_num= getpass.getpass("pls, input your 16 DIGITS card number: ")
 
     if (card_num[0] == "5" and len(card_num) == 16):
-        print("you have a Mastercard \n")                              
+        print("you have a Mastercard \n")  
+
+        exp_date = input("enter card expiry date in this format yy/mm ")
+        if exp_date[:4] >= '2021' and exp_date[2:] <= '31':
+            print(exp_date[:4], exp_date[-2:])
+        else:
+            print("Expired  Mastercard")
+            atm()                            
         user_pass = getpass.getpass("pls, input your password: ")
         print(len(user_pass) * '#')
+
         transact = input(f"You are welcome to pytBank, {user_title} {user_name} select 1 or 2 \
             \n 1. check balance \
             \n 2. cash withdrawal \n\
@@ -59,7 +67,13 @@ def atm():
                 atm()
         else: atm()
     elif (card_num[0] == "4") and (len(card_num) == 14):
-        print("you have a Visa_card \n")                              
+        print("you have a Visa_card \n") 
+        exp_date = input("enter card expiry date in this format year/month ")
+        if exp_date[:4] >= '2021' and exp_date[2:] <= '31':
+            print(exp_date[:4], exp_date[-2:])
+        else:
+            print("Expired Visa_card")
+            atm()                             
         user_pass = getpass.getpass("pls, input your password: ")
         print(len(user_pass) * '#')
         transact = input(f"You are welcome to pytBank, {user_title} {user_name} select 1 or 2 \
@@ -80,7 +94,13 @@ def atm():
                 atm()
         else: atm()
     elif (card_num[0] == "5" and len(card_num) == 19):
-        print("you have a Verve_card \n")                              
+        print("you have a Verve_card \n") 
+        exp_date = input("enter card expiry date in this format year/month ")
+        if exp_date[:4] >= '2021' and exp_date[2:] <= '31':
+            print(exp_date[:4], exp_date[-2:])
+        else:
+            print("Expired Verve_card")
+            atm()                             
         user_pass = getpass.getpass("pls, input your password: ")
         print(len(user_pass) * '#')
         transact = input(f"You are welcome to pytBank, {user_title} {user_name} select 1 or 2 \
