@@ -1,5 +1,5 @@
 # #palindrome
-
+print("PALINDROME CHECK")
 print("Welcome, let's check if your word is a palindrome")
 is_entry = input("input any word: ")
 is_entlist = list(is_entry)
@@ -7,14 +7,14 @@ is_entcopy = is_entlist.copy()
 is_entlist.reverse()
 
 if is_entlist == is_entcopy:
-      print("your entry is a palindrome!")
-else: print("fuck-off!, this isn't a palindrome")
+      print("your entry is a palindrome!\n\n")
+else: print("fuck-off!, this isn't a palindrome\n\n")
 
 
 
 #life left calculator
 
-
+print("WELCOME TO OUR TIME-LEFT CALCULATOR")
 def time_left(current_age = int(input("How old are you now dear? "))):
     life_left = 90 - current_age
     print("you have \n",life_left, "years left \n",life_left * 12, "months left \n",life_left * 52, "weeks left \n",life_left * 365, "days left\n\n")
@@ -25,7 +25,7 @@ time_left()
 
 
 # #ATM collector
-
+print("ATM COLLECTOR")
 def atm():
     import getpass
 
@@ -101,8 +101,6 @@ def atm():
         atm()
     #card_num= input("pls, input valid card number: ")
 
-
-atm()
 
 
 
