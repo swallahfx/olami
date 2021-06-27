@@ -25,12 +25,13 @@ time_left()
 
 
 # #ATM collector
-print("ATM COLLECTOR")
+
 def atm():
     import getpass
 
     
     acct_balance = 10000
+    print("ATM COLLECTOR")
     print("YOU ARE WELCOME TO pytBank \n",)
     user_name = input("pls, input Account name: ")
     user_title = input('your title: ')
@@ -56,6 +57,7 @@ def atm():
                 (acct_balance < withdraw_amt)
                 print("insufficient fund, thank you for banking with us")
                 atm()
+        else: atm()
     elif (card_num[0] == "4") and (len(card_num) == 14):
         print("you have a Visa_card \n")                              
         user_pass = getpass.getpass("pls, input your password: ")
@@ -76,6 +78,7 @@ def atm():
                 (acct_balance < withdraw_amt)
                 print("insufficient fund, thank you for banking with us")
                 atm()
+        else: atm()
     elif (card_num[0] == "5" and len(card_num) == 19):
         print("you have a Verve_card \n")                              
         user_pass = getpass.getpass("pls, input your password: ")
@@ -96,11 +99,12 @@ def atm():
                 (acct_balance < withdraw_amt)
                 print("insufficient fund, thank you for banking with us")
                 atm()
+        else: atm()
     else:
         print("invalid card, get a valid one \n \n")
         atm()
     #card_num= input("pls, input valid card number: ")
-
+atm()
 
 
 
