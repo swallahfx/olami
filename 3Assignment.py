@@ -1,37 +1,31 @@
 # #palindrome
 
-# print("Welcome, let's check if your word is a palindrome")
-# is_entry = input("input any word: ")
-# is_entlist = list(is_entry)
-# is_entcopy = is_entlist.copy()
-# is_entlist.reverse()
+print("Welcome, let's check if your word is a palindrome")
+is_entry = input("input any word: ")
+is_entlist = list(is_entry)
+is_entcopy = is_entlist.copy()
+is_entlist.reverse()
 
-# if is_entlist == is_entcopy:
-#       print("your entry is a palindrome!")
-# else: print("fuck-off!, this isn't a palindrome")
-
+if is_entlist == is_entcopy:
+      print("your entry is a palindrome!")
+else: print("fuck-off!, this isn't a palindrome")
 
 
 
 #life left calculator
 
-# print("You are welcome, let's calculate how much life you have left")
-# current_age = int(input("How old are you now dear? "))
-# life_left = 90 - current_age
-# print("you have",life_left, "years")
-# print(life_left * 12, "months left") 
-# print(life_left * 52, "weeks left")
-# print(life_left * 365, "days left")
-
-# print("You are welcome, let's calculate how much life you have left")
 
 def time_left(current_age = int(input("How old are you now dear? "))):
     life_left = 90 - current_age
     print("you have \n",life_left, "years left \n",life_left * 12, "months left \n",life_left * 52, "weeks left \n",life_left * 365, "days left\n\n")
 
-time_left()   
+time_left()  
+
+
+
 
 # #ATM collector
+
 def atm():
     import getpass
 
@@ -111,37 +105,5 @@ def atm():
 atm()
 
 
-
-# print("You are welcome to pytBank,  how much would you like to withdraw")
-# withdraw_amt = int(input("withdrawal amount: ")
-
-# if (acct_balance >= withdraw_amt):                           
-#     print("withdrawl amount of ", withdraw_amt, "successful you have "acct_balance-withdraw_amt, "left")
-# else:
-#     (acct_balance < withdraw_amt)
-#     print("insufficient fund, go and make money")
-
-
-# while (card_num[0] != 5 and len(card_num) != 16) or (card_num[0] != 4 and len(card_num) != 16) or (card_num[0] != 5 and len(card_num) != 19):
-#     card_num= input("pls, Enter a valid card number: ")
-#     break
-# user_pass = getpass.getpass("pls, input your password: ")
-# print(len(user_pass) * '*')
-# 
-
-# # password = getpass.getpass()
-# # print(password)
-
-# password = getpass.getpass('Enter password: ')
-
-
-# print(password)
-# 
-
-# message = "whats ur fucking name"
-# choice = ""
-# while choice != "exit":
-#     choice = input(message)
-#     print("choclate")
 
 
