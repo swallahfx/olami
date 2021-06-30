@@ -81,9 +81,10 @@
 
 
 #mtn number check
-num = (input("input ur num lets check"))
+num = (input("input ur num lets check "))
 fnum = list(num)
-while (fnum[0]) != '0' :
+print(fnum)
+while int(fnum[0]) not in 0 or int(fnum[1]) not in range(7,10) or int(fnum[2]) not in range(0,2) or int(fnum[3]) not in range(3,5) or int(fnum[3]) != 6 and len(fnum) != 11:
     num = (input("input ur num lets check"))
 print('its mtn')
 
