@@ -28,7 +28,6 @@ def self_service():
             go cashless with 737 USSD! Dial *737*1# to send
             money to GTB accounts and  *737*2# to other bank accounts
             ''')
-            f_bal = bank_balance - amount
             bank_balance = f_bal
             re_run = input('''
             Would you like to perform another transaction
@@ -50,23 +49,23 @@ def self_service():
             Pls enter amount: N '''))
             if transfer_amount <= bank_balance:
                 pin_code = input(f'''
-            Enter your 737 PIN or Token code to top up {third_party_num}.
-            with N {transfer_amount} or enter 0 to cancel ''')
+                    Enter your 737 PIN or Token code to top up {third_party_num}.
+                    with N {transfer_amount} or enter 0 to cancel ''')
 
                 while pin_code != '1234':
                     pin_code = input(f'''
-            Enter valid 737 PIN or Token code to top up {third_party_num}.
-            with N {transfer_amount} or enter 0 to cancel ''')
+                        Enter valid 737 PIN or Token code to top up {third_party_num}.
+                        with N {transfer_amount} or enter 0 to cancel ''')
                 final_transfer = bank_balance - transfer_amount
-                bank_balance= final_transfer
+                bank_balance = final_transfer
                 return_val = input(f'''
                     Transfer amount of N {transfer_amount} was successful.
                     Would you like to perform another transaction if yes 
                     enter 1 or enter 0 to cancel ''')
-                bank_balance= final_transfer
+                # bank_balance= final_transfer
                 if return_val == '1':
                     self_service()
-                exit()
+                    exit()
 
                 if pin_code == '0':
                     exit()
@@ -78,8 +77,8 @@ def self_service():
 
         
         elif service1 == '3':
-            final_transfer = bank_balance - transfer_amount
-            bank_balance = final_transfer
+            
+            
             pin_code = input('''
             Enter your 7377 PIN or Token code to check your balance.
             please note a N10 network charge will deducted from
@@ -89,7 +88,7 @@ def self_service():
             Invalid PIN,
             Please enter correct 7377 PIN ''')
             balance = input(f''' 
-            Your Account balance is {final_transfer}
+            Your Account balance is {bank_balance}
             Would you like to perform another transaction
             if yes enter 1 or enter 0 to cancel ''')
             if balance == '1':
